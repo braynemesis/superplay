@@ -1,0 +1,385 @@
+.navbar--custom {
+  background: #fff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0;
+  padding-right: 0;
+
+  li {
+    @include media-breakpoint-up(md) {
+      @include rem("margin-right", 41px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-right", 71px);
+    }
+
+    a {
+      font-weight: 400;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      @include make-title(18px, 24px, 0, false);
+
+      &::after {
+        content: "";
+        border: none;
+        display: block;
+        position: absolute;
+        background: var(--background-color-menu);
+        width: 0;
+        z-index: -1;
+        margin-left: 0;
+
+        @include rem("height", 9px);
+        @include rem("top", 14px);
+      }
+
+      &:focus,
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    a.dropdown-toggle {
+      font-weight: 400;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      @include make-title(18px, 24px, 0, false);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: var(--background-color-menu);
+        width: 0;
+        z-index: -1;
+        margin-left: 0;
+
+        @include rem("height", 9px);
+        @include rem("top", 14px);
+      }
+
+      &:focus,
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        &::after {
+          display: inline-block;
+          margin-left: 0.255em;
+          vertical-align: 0.255em;
+          content: "";
+          border-top: 0.3em solid;
+          border-right: 0.3em solid transparent;
+          border-bottom: 0;
+          border-left: 0.3em solid transparent;
+          background-color: transparent;
+          width: 10.78px !important;
+          height: 9px !important;
+        }
+      }
+    }
+
+    &.current-menu-item {
+      a {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(sm) {
+        margin-right: 0;
+      }
+    }
+
+    & > .dropdown-menu {
+      border: none;
+      background-color: #f4f4f4;
+      margin: 0;
+      text-align: right;
+
+      @include media-breakpoint-up(sm) {
+        left: -50%;
+      }
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
+
+      li {
+        padding: 0.25rem 0;
+        margin: 0 1.5rem;
+
+        a {
+          position: relative;
+          padding: 0;
+          display: inline;
+
+          @include font-computed(16px, 22px);
+
+          &::after {
+            left: 0;
+          }
+
+          &:hover,
+          &:focus {
+            color: #000;
+            background-color: transparent;
+
+            &::after {
+              width: 100%;
+
+              @include rem("top", 2px);
+            }
+          }
+        }
+
+        &.active {
+          a.dropdown-item {
+            &::after {
+              @include rem("top", 2px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container--custom {
+    @include make-container();
+
+    @include media-breakpoint-up(md) {
+      @include make-container();
+      @include make-container-max-widths();
+    }
+  }
+
+  & > .container--custom {
+    .navbar-brand {
+      position: relative;
+      background: #000;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+
+      @include rem("padding", 21.4px 14.9px 16.7px 11.4px);
+      @include rem("width", 84.68px);
+      @include rem("height", 85px);
+
+      img {
+        @extend .img-fluid;
+      }
+    }
+
+    .navbar-toggler {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 0;
+      outline: none;
+      cursor: pointer;
+      margin-left: auto;
+
+      @include rem("top", -42px);
+
+      .hamburger {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        width: 21.69px;
+        z-index: 2;
+
+        span {
+          background-color: #000;
+          border: 1.5px solid #000;
+          width: 100%;
+          display: block;
+          height: 1px;
+          margin-top: 5px;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .navbar-toggler[aria-expanded=true] {
+      .hamburger--close {
+        span {
+          &:nth-child(1) {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            margin-top: 7px;
+          }
+
+          &:nth-child(2) {
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            margin-top: -11px;
+          }
+        }
+      }
+    }
+
+    & > .navbar-collapse {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        display: block;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 100vw;
+        max-width: 60%;
+        background: #f4f4f4;
+        -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.28);
+        -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.28);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.28);
+        opacity: 1;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        &.collapse:not(.show) {
+          opacity: 0;
+          width: 0;
+        }
+
+        & > .navbar-content {
+          height: 100%;
+
+          @include rem("margin-top", 80px);
+          @include rem("padding-bottom", 116px);
+
+          .navbar-nav {
+            text-align: right;
+
+            @include rem("margin-bottom", 115px);
+
+            & > li {
+              @include rem("margin-bottom", 12px);
+
+              & > a {
+                @include rem("margin-right", 44px);
+              }
+            }
+          }
+
+          .dropdown-menu {
+            width: 90%;
+            margin: auto;
+            border-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &.navbar--big {
+    @include media-breakpoint-up(md) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .navbar-brand {
+        background: #000;
+
+        @include rem("padding", 37.4px 26.3px 29.4px 21.5px);
+        @include rem("width", 150px);
+        @include rem("height", 150px);
+      }
+    }
+  }
+
+  &.navbar--cases {
+    background: var(--background-color-header);
+
+    .nav-item {
+      .nav-link,
+      .nav-link.dropdown-toggle {
+        color: var(--color-header);
+
+        &::after {
+          background-color: var(--background-color-hover-header);
+          opacity: 0.5;
+        }
+      }
+
+      .nav-link.dropdown-toggle {
+        &::before {
+          background-color: var(--background-color-hover-header);
+          opacity: 0.5;
+        }
+
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+
+    & > .container--custom {
+      .navbar-brand {
+        background: var(--background-color-header);
+        border: 1px solid var(--color-header);
+      }
+
+      & > .navbar-toggler {
+        .hamburger {
+          span.bar {
+            background-color: var(--color-header);
+            border-color: var(--color-header);
+          }
+        }
+      }
+
+      & > .navbar-collapse {
+        @include media-breakpoint-down(sm) {
+          background: var(--background-color-header);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown > .dropdown-toggle:active {
+      pointer-events: none;
+    }
+  }
+}

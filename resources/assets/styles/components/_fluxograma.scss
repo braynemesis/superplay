@@ -1,0 +1,198 @@
+.flowchart {
+  .module-rows_row-content {
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      background: rgb(255, 255, 255);
+      background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      background: linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#f4f4f4", GradientType=1);
+      text-align: right;
+    }
+
+    .container {
+      background: none !important;
+    }
+  }
+
+  .flowchart-steps {
+    h3 {
+      @include make-title(23px, 33px, 0.69px, true, $body-color);
+    }
+
+    p {
+      @include font-computed(18px, 24px, 0.54px);
+    }
+
+    .col-step {
+      position: relative;
+      margin-bottom: 40px;
+
+      div {
+        position: relative;
+
+        div.before,
+        div.after {
+          display: block;
+          position: absolute;
+        }
+
+        div.before {
+          object-fit: contain;
+          border: solid 2px var(--background-color-category);
+          z-index: -1;
+        }
+
+        div.after {
+          display: block;
+          position: absolute;
+          background-image: url("../images/arrowDiagonal.png");
+          background-repeat: no-repeat;
+          width: 35px;
+          height: 29.7px;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 100px;
+      }
+    }
+
+    .col-step--4,
+    .col-step--5,
+    .col-step--6 {
+      div {
+        div.after {
+          display: none;
+        }
+      }
+    }
+
+    .col-step--5,
+    .col-step--6 {
+      div {
+        h3 {
+          margin-bottom: 30px;
+
+          @include make-title(24px, 30px, 0, true, $body-color);
+        }
+      }
+    }
+
+    .col-step--2 {
+      div {
+        min-width: 200px;
+        max-width: 200px;
+        padding-top: 30px;
+
+        div.before {
+          width: 166px;
+          height: 84px;
+          left: 24%;
+          bottom: 20%;
+        }
+
+        div.after {
+          right: 0;
+
+          @include media-breakpoint-up(lg) {
+            right: -37%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        top: -20px;
+        left: 20px;
+      }
+    }
+
+    .col-step--3 {
+      div {
+        min-width: 186px;
+        max-width: 186px;
+        margin-left: auto;
+
+        div.before {
+          width: 156px;
+          height: 35px;
+          left: -12%;
+          bottom: 32%;
+        }
+
+        div.after {
+          -webkit-transform: rotate(100deg);
+          transform: rotate(100deg);
+          left: -25%;
+          bottom: -37.5%;
+
+          @include media-breakpoint-up(lg) {
+            left: -50%;
+            bottom: -75%;
+          }
+        }
+      }
+    }
+
+    .col-step--4 {
+      div {
+        min-width: 221px;
+        max-width: 221px;
+        padding-top: 5px;
+
+        div.before {
+          width: 114px;
+          height: 36px;
+          left: -5%;
+          top: 4%;
+
+          @include media-breakpoint-up(lg) {
+            left: -15%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    .col-step--5 {
+      div {
+        div.before {
+          display: none;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        top: -171px;
+        margin-bottom: 80px;
+      }
+    }
+
+    .col-step--6 {
+      div {
+        z-index: 100;
+        position: relative;
+
+        div.before {
+          width: 236px;
+          height: 236px;
+          border-radius: 50%;
+          background-color: var(--background-color-category);
+          left: -20%;
+
+          @include media-breakpoint-up(lg) {
+            left: -43%;
+          }
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        top: -171px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

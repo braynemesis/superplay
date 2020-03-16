@@ -1,0 +1,277 @@
+.article-post {
+  @include rem("margin-bottom", 30px);
+
+  @include media-breakpoint-up(md) {
+    background: rgb(244, 244, 244);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(244, 244, 244, 1) 50%,
+      rgba(255, 255, 255, 1) 50%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(244, 244, 244, 1) 50%,
+      rgba(255, 255, 255, 1) 50%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(244, 244, 244, 1) 50%,
+      rgba(255, 255, 255, 1) 50%
+    );
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#ffffff", GradientType=1);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include rem("margin-bottom", 50px);
+  }
+
+  &_content {
+    background: rgb(244, 244, 244);
+    background: -moz-linear-gradient(
+      360deg,
+      rgba(244, 244, 244, 1) 90%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -webkit-linear-gradient(
+      360deg,
+      rgba(244, 244, 244, 1) 90%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: linear-gradient(
+      360deg,
+      rgba(244, 244, 244, 1) 90%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#ffffff", GradientType=1);
+
+    @include rem("padding-left", 15px);
+    @include rem("padding-right", 15px);
+    @include rem("padding-bottom", 25px);
+
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+      padding-right: 0;
+      background: rgb(244, 244, 244);
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(244, 244, 244, 1) 80%,
+        rgba(255, 255, 255, 1) 80%
+      );
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(244, 244, 244, 1) 80%,
+        rgba(255, 255, 255, 1) 80%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(244, 244, 244, 1) 80%,
+        rgba(255, 255, 255, 1) 80%
+      );
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#ffffff", GradientType=1);
+
+      @include rem("padding-top", 40px);
+      @include rem("padding-bottom", 110px);
+    }
+
+    &-image-container {
+      position: relative;
+      height: 100%;
+
+      @include rem("padding-bottom", 16px);
+
+      &::after {
+        content: "";
+        display: block;
+        width: 85%;
+        margin: auto;
+        background-color: var(--background-color-category);
+
+        @include rem("height", 10px);
+      }
+    }
+
+    &-image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+      @include rem("min-height", 160px);
+      @include rem("max-height", 424px);
+
+      img {
+        display: block;
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-date-container {
+      position: relative;
+
+      @include rem("margin-top", 16px);
+      @include rem("padding-bottom", 10px);
+    }
+
+    &-date {
+      display: block;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 50%;
+
+      @include rem("padding", 10px);
+      @include rem("width", 55px);
+      @include rem("height", 55px);
+      @include font-computed(9px, 12px);
+
+      span {
+        display: block;
+
+        @include font-computed(16px, 19px);
+      }
+    }
+
+    &-summary-container {
+      position: relative;
+
+      @include rem("margin-top", 10px);
+
+      .entry-summary p,
+      ol {
+        color: #707171;
+
+        @include font-computed(14px, 24px, 0.28px);
+
+        @include media-breakpoint-up(md) {
+          @include font-computed(18px, 40px, 0.54px);
+        }
+      }
+
+      header {
+        @include rem("padding-bottom", 15px);
+
+        h2 {
+          a {
+            font-family: "Gilroy", sans-serif;
+            font-weight: bold;
+            color: #292929;
+
+            @include font-computed(30px, 30px);
+          }
+        }
+
+        ol {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          font-style: italic;
+
+          li {
+            display: inline;
+
+            &::after {
+              content: "/";
+
+              @include rem("margin-left", 5px);
+            }
+
+            &:last-child {
+              &::after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+
+      .entry-summary {
+        @include rem("margin-top", 15px);
+
+        a {
+          position: relative;
+          font-weight: bold;
+          color: #707070;
+
+          @include font-computed(14px, 30px);
+
+          @include media-breakpoint-up(lg) {
+            @include font-computed(20px, 36px);
+          }
+
+          @include arrow-link();
+
+          i {
+            margin-left: 9px;
+            vertical-align: 0;
+            width: 16.8px;
+            height: 9px;
+
+            @include media-breakpoint-up(md) {
+              vertical-align: 1px;
+            }
+          }
+
+          &:hover,
+          &:focus {
+            color: #707070;
+          }
+        }
+      }
+    }
+  }
+
+  &--inverted {
+    @include media-breakpoint-up(md) {
+      background: rgb(244, 244, 244);
+      background: -moz-linear-gradient(
+        270deg,
+        rgba(244, 244, 244, 1) 50%,
+        rgba(255, 255, 255, 1) 50%
+      );
+      background: -webkit-linear-gradient(
+        270deg,
+        rgba(244, 244, 244, 1) 50%,
+        rgba(255, 255, 255, 1) 50%
+      );
+      background: linear-gradient(
+        270deg,
+        rgba(244, 244, 244, 1) 50%,
+        rgba(255, 255, 255, 1) 50%
+      );
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#ffffff", GradientType=1);
+
+      .article-post_content {
+        background: rgb(244, 244, 244);
+        background: -moz-linear-gradient(
+          270deg,
+          rgba(244, 244, 244, 1) 80%,
+          rgba(255, 255, 255, 1) 80%
+        );
+        background: -webkit-linear-gradient(
+          270deg,
+          rgba(244, 244, 244, 1) 80%,
+          rgba(255, 255, 255, 1) 80%
+        );
+        background: linear-gradient(
+          270deg,
+          rgba(244, 244, 244, 1) 80%,
+          rgba(255, 255, 255, 1) 80%
+        );
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#ffffff", GradientType=1);
+
+        &-date {
+          margin-left: auto;
+        }
+
+        &-summary-container {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+

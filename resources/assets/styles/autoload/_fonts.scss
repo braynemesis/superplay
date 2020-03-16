@@ -1,0 +1,143 @@
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("#{$font-path}/gilroy/gilroy-light.eot");
+  src:
+    url("#{$font-path}/gilroy/gilroy-light.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/gilroy/gilroy-light.woff2") format("woff2"),
+    url("#{$font-path}/gilroy/gilroy-light.woff") format("woff"),
+    url("#{$font-path}/gilroy/gilroy-light.ttf") format("truetype"),
+    url("#{$font-path}/gilroy/gilroy-light.svg#gilroy-lightuploaded_file") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("#{$font-path}/gilroy/gilroy-regular.eot");
+  src:
+    url("#{$font-path}/gilroy/gilroy-regular.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/gilroy/gilroy-regular.woff2") format("woff2"),
+    url("#{$font-path}/gilroy/gilroy-regular.woff") format("woff"),
+    url("#{$font-path}/gilroy/gilroy-regular.ttf") format("truetype"),
+    url("#{$font-path}/gilroy/gilroy-regular.svg#gilroy-regularuploaded_file") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("#{$font-path}/gilroy/gilroy-medium.eot");
+  src:
+    url("#{$font-path}/gilroy/gilroy-medium.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/gilroy/gilroy-medium.woff2") format("woff2"),
+    url("#{$font-path}/gilroy/gilroy-medium.woff") format("woff"),
+    url("#{$font-path}/gilroy/gilroy-medium.ttf") format("truetype"),
+    url("#{$font-path}/gilroy/gilroy-medium.svg#gilroy-mediumuploaded_file") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("#{$font-path}/gilroy/gilroy-bold.eot");
+  src:
+    url("#{$font-path}/gilroy/gilroy-bold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/gilroy/gilroy-bold.woff2") format("woff2"),
+    url("#{$font-path}/gilroy/gilroy-bold.woff") format("woff"),
+    url("#{$font-path}/gilroy/gilroy-bold.ttf") format("truetype"),
+    url("#{$font-path}/gilroy/gilroy-bold.svg#gilroy-bolduploaded_file") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("#{$font-path}/gilroy/gilroy-heavy.eot");
+  src:
+    url("#{$font-path}/gilroy/gilroy-heavy.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/gilroy/gilroy-heavy.woff2") format("woff2"),
+    url("#{$font-path}/gilroy/gilroy-heavy.woff") format("woff"),
+    url("#{$font-path}/gilroy/gilroy-heavy.ttf") format("truetype"),
+    url("#{$font-path}/gilroy/gilroy-heavy.svg#gilroy-heavyuploaded_file") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-regular.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-regular.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-regular.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-regular.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-regular.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-regular.svg#new_york_mediumregular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-medium.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-medium.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-medium.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-medium.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-medium.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-medium.svg#new_york_mediummedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-semibold.svg#new_york_mediumsemibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-bold.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-bold.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-bold.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-bold.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-bold.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-bold.svg#new_york_mediumbold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-black.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-black.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-black.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-black.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-black.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-black.svg#new_york_mediumblack") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.eot");
+  src:
+    url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.eot?#iefix") format("embedded-opentype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.woff2") format("woff2"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.woff") format("woff"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.ttf") format("truetype"),
+    url("#{$font-path}/newyorkmedium/newyorkmedium-heavy.svg#new_york_mediumheavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}

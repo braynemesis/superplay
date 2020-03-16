@@ -1,0 +1,33 @@
+.color_title_text_rows {
+  background: #fd4d57;
+  padding: 150px;
+  color: white;
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  h2 {
+    font-size: 100px;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .info-elements {
+    .row {
+      margin-bottom: 150px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

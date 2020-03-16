@@ -1,0 +1,63 @@
+.title-4-columns_title,
+.title-4-columns_column-title {
+  @include make-title(32px, 36px, 0, true);
+}
+
+.title-4-columns {
+  .row > div {
+    @include media-breakpoint-down(sm) {
+      &:nth-child(1n + 0) {
+        @include rem("padding-right", 5px);
+        @include rem("padding-left", 15px);
+      }
+
+      &:nth-child(2n + 0) {
+        @include rem("padding-left", 5px);
+        @include rem("padding-right", 15px);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      @include rem("margin-bottom", 10px);
+    }
+  }
+
+  &_column-content {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      background-color: #f4f4f4;
+      padding: 40px 10px 10px 10px;
+    }
+  }
+
+  &_title {
+    @include rem("margin-bottom", 70px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 140px);
+      @include font-computed(40px, 45px);
+    }
+  }
+
+  &_column-image {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 130px);
+    @include rem("margin-bottom", 35px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 70px);
+    }
+  }
+
+  &_column-title {
+    text-align: center;
+
+    @include font-computed(15px, 18px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(30px, 36px);
+    }
+  }
+}

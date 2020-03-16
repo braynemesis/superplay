@@ -1,0 +1,93 @@
+.title-2-columns-image-content_title,
+.title-2-columns-image-content_content_title,
+.title-2-columns-image-content_content_text,
+.title-2-columns-image-content_content_link {
+  @include make-title(18px, 30px, 10.8px, false, inherit);
+
+  font-weight: 500;
+}
+
+.title-2-columns-image-content {
+  @include rem("padding", 75px 0 50px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding", 150px 0 100px);
+  }
+
+  &_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    @include font-computed(10px, 30px, 0);
+    @include rem("margin-bottom", 60px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 120px);
+    }
+  }
+
+  &_image {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 370px);
+    @include rem("margin-bottom", 17.5px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 35px);
+    }
+  }
+
+  &_content {
+    &_title {
+      font-weight: 500;
+      letter-spacing: initial;
+
+      @include rem("margin-bottom", 22px);
+      @include font-computed(22px, 0, 0);
+
+      @include media-breakpoint-up(lg) {
+        @include rem("margin-bottom", 35px);
+        @include font-computed(34px, 45px, 0);
+      }
+    }
+
+    &_text {
+      font-weight: 500;
+      letter-spacing: initial;
+
+      @include rem("margin-bottom", 12.5px);
+      @include font-computed(16px, 32px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem("margin-bottom", 25px);
+        @include font-computed(20px, 40px);
+      }
+    }
+
+    &_link {
+      font-weight: 500;
+      letter-spacing: initial;
+      display: inline-block;
+      background-color: var(--title-2-columns-image-content-bg);
+
+      @include rem("padding", 10px 30px);
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: inherit;
+        background-color: var(--title-2-columns-image-content-bg);
+        -webkit-filter: brightness(120%);
+        filter: brightness(120%);
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

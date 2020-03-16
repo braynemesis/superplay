@@ -1,0 +1,100 @@
+.title-gallery-testimonials {
+  background: white;
+
+  &_title {
+    @include rem("margin-bottom", 57.5px);
+    @include make-title(30px, 30px, 0, true);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 115px);
+      @include font-computed(40px, 45px);
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &_gallery-col {
+    @include media-breakpoint-down(md) {
+      @include rem("margin-bottom", 40px);
+    }
+  }
+
+  &_gallery {
+    & > div {
+      @include rem("margin-bottom", 30px);
+
+      @include media-breakpoint-down(md) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &_gallery-image {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 180px);
+  }
+
+  &_carousel {
+    .carousel-inner {
+      background-repeat: no-repeat;
+
+      @include rem("background-position", -5px -5px);
+      @include rem("background-size", 130px);
+      @include rem("padding-left", 18px);
+      @include rem("padding-right", 18px);
+      @include rem("padding-top", 55px);
+      @include rem("padding-bottom", 40px);
+    }
+
+    .carousel-indicators {
+      margin-bottom: 0;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
+      justify-content: left;
+
+      @include rem("margin-left", 15px);
+
+      li {
+        width: 10.6px;
+        height: 10.6px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+
+        &.active {
+          background-color: #707171;
+        }
+      }
+    }
+
+    .carousel-item {
+      p {
+        @include font-computed(14px, 24px, 0.28px);
+      }
+
+      h2,
+      h3 {
+        @include make-title(10px, 21px, 1px, true, $body-color);
+      }
+
+      h2 {
+        display: inline-block;
+        background: linear-gradient(to right, var(--background-color-category) 40%, var(--background-color-category) 40%, #fff 40%);
+        text-transform: uppercase;
+
+        @include font-computed(12px, 21px, 1.2px);
+      }
+
+      h3 {
+        font-weight: 400;
+
+        @include font-computed(10px, 21px, 1px);
+      }
+    }
+  }
+}

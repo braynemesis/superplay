@@ -1,0 +1,33 @@
+.marcas h3 {
+  font-family: Gilroy, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #292929;
+}
+
+@media (max-width: 574px) {
+  .titulo-marcas {
+    width: 75%;
+  }
+
+  .marcas h3 {
+    font-size: 30px;
+    line-height: 1;
+    text-align: left;
+    color: #292929;
+  }
+}
+
+@media (min-width: 720px) {
+  .titulo-marcas {
+    width: 50%;
+  }
+
+  .marcas h3 {
+    font-size: 40px;
+    line-height: 1.13;
+    text-align: left;
+  }
+}

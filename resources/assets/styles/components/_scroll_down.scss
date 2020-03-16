@@ -1,0 +1,19 @@
+.scroll-down {
+  @include rem("padding-top", 15px);
+  @include rem("margin-bottom", 15px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding-top", 30px);
+    @include rem("margin-bottom", 30px);
+  }
+
+  button {
+    display: block;
+    margin: auto;
+  }
+
+  &_image {
+    display: block;
+    margin: auto;
+  }
+}

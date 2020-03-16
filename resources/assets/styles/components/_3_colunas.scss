@@ -1,0 +1,36 @@
+.three-columns {
+  &_col {
+    @include rem("padding-top", 15px);
+    @include rem("padding-bottom", 15px);
+  }
+
+  &_content {
+    &_image {
+      display: block;
+      margin: 0 auto 50px;
+
+      @include rem("max-width", 160px);
+    }
+
+    &_title {
+      @include make-title(24px, 36px, 0, true);
+      @include rem("margin-bottom", 20px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem("margin-bottom", 40px);
+        @include font-computed(30px, 45px);
+      }
+    }
+
+    &_text {
+      color: $body-color;
+      font-weight: 400;
+
+      @include font-computed(16px, 16px, 0.48px);
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(18px, 36px, 0.54px);
+      }
+    }
+  }
+}

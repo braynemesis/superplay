@@ -1,0 +1,72 @@
+.title-3-columns-v2 {
+  @include rem("margin-bottom", 60px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("margin-bottom", 120px);
+  }
+
+  &_title,
+  &_column-title {
+    font-family: "Gilroy", sans-serif;
+    font-weight: bold;
+    color: #292929;
+  }
+
+  &_title {
+    @include font-computed(30px, 30px);
+    @include rem("margin-bottom", 40px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(40px, 45px);
+      @include rem("margin-bottom", 90px);
+    }
+  }
+
+  &_column {
+    @include rem("margin-bottom", 10px);
+  }
+
+  &_column-content {
+    background-color: #f4f4f4;
+
+    @include rem("border-radius", 2px);
+    @include rem("padding", 20px);
+  }
+
+  &_column-image {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 105px);
+    @include rem("margin-bottom", 40px);
+  }
+
+  &_column-title {
+    text-align: center;
+
+    @include font-computed(18px, 22px);
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(30px, 36px);
+      @include rem("margin-bottom", 40px);
+    }
+  }
+
+  &_column-text {
+    color: #707171;
+
+    @include font-computed(14px, 24px, 0.28px);
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(16px, 30px, 0.13px);
+      @include rem("margin-bottom", 30px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(18px, 36px, 0.54px);
+      @include rem("margin-bottom", 40px);
+    }
+  }
+}

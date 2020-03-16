@@ -1,0 +1,136 @@
+.title-text-image-gallery-columns {
+  background-color: #f8f8f8;
+
+  @include rem("padding-bottom", 60px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding-bottom", 120px);
+  }
+
+  &_title,
+  &_text,
+  &_columns-title {
+    margin: auto;
+
+    @include make-title(30px, 30px, 0, true);
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+
+      @include rem("max-width", 384px);
+      @include rem("margin-bottom", 40px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include rem("max-width", 650px);
+      @include font-computed(24px, 40px, 0.72px);
+    }
+  }
+
+  &_title {
+    @include rem("margin-bottom", 25px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(40px, 45px);
+    }
+  }
+
+  &_text {
+    font-weight: 500;
+    color: $body-color;
+
+    @include font-computed(16px, 16px, 0.48px);
+    @include rem("margin-bottom", 40px);
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 80px);
+    }
+  }
+
+  &_image {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 310px);
+    @include rem("margin-bottom", 40px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("max-width", 250px);
+      @include rem("margin-bottom", 80px);
+    }
+  }
+
+  &_gallery {
+    & > div {
+      @include rem("margin-bottom", 30px);
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      @include rem("margin-bottom", 60px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 80px);
+    }
+
+    &-image {
+      display: block;
+      margin: auto;
+
+      @include rem("max-width", 135px);
+    }
+  }
+
+  &_columns {
+    @include rem("margin-bottom", 30px);
+
+    &-title {
+      margin: 0;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: #e0007a;
+
+      @include font-computed(20px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(25px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(45px);
+      }
+    }
+
+    &-title--small {
+      display: block;
+      font-weight: bold;
+      color: $body-color;
+
+      @include font-computed(16px);
+
+      @include media-breakpoint-up(md) {
+        font-weight: 500;
+
+        @include font-computed(16px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(30px);
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

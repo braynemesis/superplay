@@ -1,0 +1,154 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+:root {
+  --background-color-category: #0ff;
+  --background-color-menu: #0ff;
+  --background-color-header: #fff;
+  --color-header: #fff;
+  --background-color-hover-header: #fff;
+  --title-2-columns-image-content-bg: initial;
+}
+
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+@import "~wowjs/css/libs/animate.css";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/mixins";
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
+
+body {
+  font-family: "New York Medium", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  color: $body-color;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 1;
+  background-color: #fff;
+}
+
+.loader img {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
+.wrap {
+  @include rem("padding-top", 115px);
+
+  @include media-breakpoint-up(md) {
+    @include rem("padding-top", 180px);
+  }
+}
+
+section {
+  @include rem("padding-top", 37.75px);
+  @include rem("margin-bottom", 37.75px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding-top", 75.5px);
+    @include rem("margin-bottom", 75.5px);
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+@import "components/navigation";
+
+/** components - home */
+@import "components/hero_slide";
+@import "components/titulo_3_colunas_v1";
+@import "components/titulo_video_3_colunas_v1";
+@import "components/projetos_e_cases";
+@import "components/titulo_texto_imagem_galeria_colunas";
+@import "components/titulo_galeria_depoimentos";
+@import "components/titulo_shortcode";
+
+/** components - Blog */
+@import "components/page_featured_image";
+@import "components/page_header";
+@import "components/section_tags";
+@import "components/content_featured";
+@import "components/content_blog";
+@import "components/content_single";
+@import "components/pagination";
+
+/** components - Sobre */
+@import "components/galeria";
+
+/** components - Cases */
+@import "components/single_case";
+
+/** components - Jobs */
+@import "components/single_jobs";
+
+/** components - Soluções */
+@import "components/hero_v2";
+@import "components/scroll_down";
+@import "components/titulo_centralizado_texto";
+@import "components/titulo_2_colunas_texto_imagem";
+@import "components/titulo_3_colunas_v2";
+@import "components/titulo_2_colunas_imagem_conteudo";
+@import "components/3_colunas";
+@import "components/titulo_4_colunas";
+@import "components/titulo_linhas";
+@import "components/linhas";
+@import "components/titulo_texto_linhas";
+@import "components/titulo_texto_galeria";
+@import "components/titulo_texto_colunas";
+@import "components/imagem_texto_link";
+@import "components/titulo_paragrafo";
+@import "components/blocos_2_colunas";
+@import "components/module_jobs";
+@import "components/imagem_apps_site";
+@import "components/fluxograma";
+// @import "components/texto_simples";
+// @import "components/titulo_linhas";
+// @import "components/marcas_empresas";
+// @import "components/color_title_text_rows";
+@import "components/footer";
+@import "components/404";

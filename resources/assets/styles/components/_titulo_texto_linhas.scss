@@ -1,0 +1,93 @@
+.title-text-rows_title,
+.title-text-rows_text,
+.title-text-rows_content_title {
+  @include make-title(20px, 25px, 0, true, "");
+}
+
+.title-text-rows {
+  text-align: center;
+
+  @include rem("padding", 75px 0 50px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding", 150px 0 100px);
+  }
+
+  &_title {
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 40px);
+      @include font-computed(40px, 45px);
+    }
+  }
+
+  &_text {
+    font-weight: 500;
+    margin: auto;
+
+    @include font-computed(16px, 20px, 0.48px);
+    @include rem("margin-bottom", 60px);
+
+    @include media-breakpoint-up(lg) {
+      max-width: 85%;
+
+      @include rem("margin-bottom", 120px);
+      @include font-computed(24px, 40px, 0.72px);
+    }
+  }
+
+  .row {
+    @include rem("padding-bottom", 60px);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &_col {
+    @include rem("margin-top", 15px);
+    @include rem("margin-bottom", 15px);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &_content {
+    text-align: initial;
+
+    &_image {
+      display: block;
+      margin: 0 auto 25px;
+
+      @include rem("max-width", 595px);
+
+      @include media-breakpoint-up(lg) {
+        @include rem("margin-bottom", 50px);
+      }
+    }
+
+    &_title {
+      @include rem("margin-bottom", 22px);
+      @include font-computed(45px);
+
+      @include media-breakpoint-up(xl) {
+        @include rem("margin-bottom", 65px);
+        @include font-computed(90px, 50px);
+      }
+    }
+
+    &_text {
+      @include font-computed(16px);
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(18px, 36px, 0.54px);
+      }
+    }
+  }
+}

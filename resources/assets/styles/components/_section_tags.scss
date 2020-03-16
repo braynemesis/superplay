@@ -1,0 +1,157 @@
+.section-tags {
+  @include rem("padding-top", 40px);
+  @include rem("margin-bottom", 50px);
+
+  @include media-breakpoint-up(md) {
+    @include rem("padding-top", 50px);
+    @include rem("margin-bottom", 30px);
+  }
+
+  &_title {
+    position: relative;
+    font-weight: bold;
+    color: #1c1c1c;
+
+    @include font-computed(20px, 40px);
+    @include rem("margin-bottom", 25px);
+
+    @include media-breakpoint-up(md) {
+      @include rem("margin-bottom", 50px);
+      @include font-computed(30px, 40px);
+    }
+  }
+
+  &_tags--modal {
+    text-align: center;
+
+    a {
+      font-weight: 600;
+      color: #707171;
+    }
+  }
+
+  &_tags {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: italic;
+
+    li {
+      display: inline;
+
+      &::after {
+        content: "/";
+
+        @include rem("margin-left", 5px);
+      }
+
+      &:last-child {
+        &::after {
+          content: "";
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #707171;
+
+        @include font-computed(12px, 30px, 0.24px);
+
+        @include media-breakpoint-up(md) {
+          color: #a2a2a2;
+
+          @include font-computed(22px, 36px);
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: #212529;
+        }
+      }
+    }
+
+    &-btn-container {
+      text-align: center;
+    }
+
+    &-btn {
+      font-family: "Gilroy", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #000;
+
+      @include font-computed(18px, 30px);
+      @include rem("margin-top", 25px);
+      @include rem("padding", 5px 25px);
+
+      &:hover,
+      &:focus {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+
+  .modal-header {
+    padding-bottom: 0;
+  }
+
+  .modal-body {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    background-color: #e2e2e2;
+  }
+
+  .modal-title {
+    font-weight: bold;
+    color: #0b070c;
+
+    @include font-computed(20px, 40px);
+  }
+}
+
+.single-post {
+  .section-tags {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    @include rem("margin-bottom", 45px);
+
+    @include media-breakpoint-up(md) {
+      @include rem("padding-top", 25px);
+      @include rem("margin-bottom", 89px);
+    }
+
+    &_title {
+      display: none;
+      font-weight: 400;
+
+      @include font-computed(20px, 40px);
+
+      @include media-breakpoint-up(md) {
+        display: block;
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &_tags {
+      text-align: left;
+
+      li {
+        a {
+          font-weight: 300;
+
+          @include font-computed(20px, 30px);
+        }
+      }
+    }
+  }
+}

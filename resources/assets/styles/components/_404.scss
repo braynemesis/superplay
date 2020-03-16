@@ -1,0 +1,43 @@
+.errorContent404 {
+  margin-top: 50px;
+
+  .page-title {
+    @include make-title(20px, 0, 0, true);
+
+    span {
+      display: block;
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include font-computed(32px, 0);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(56px, 0);
+    }
+  }
+
+  .number404 {
+    display: block;
+
+    @include make-title(20px, 25px, 0, true);
+    @include font-computed(120px);
+
+    @include media-breakpoint-up(sm) {
+      @include font-computed(240px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(320px);
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

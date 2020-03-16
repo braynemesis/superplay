@@ -1,0 +1,48 @@
+.title-2-columns-text-image {
+  &_title {
+    @include rem("margin-bottom", 40px);
+    @include make-title(50px, 40px, 0, true);
+
+    @include media-breakpoint-up(md) {
+      @include rem("margin-bottom", 80px);
+      @include make-title(100px, 90px, 0, true);
+    }
+
+    span {
+      display: block;
+
+      &:last-child {
+        margin-left: 10%;
+      }
+    }
+  }
+
+  &_text {
+    @include rem("margin-bottom", 20px);
+    @include font-computed(16px, 32px);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+
+      @include font-computed(18px, 40px, 0.54px);
+    }
+  }
+
+  &_image-container {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, var(--background-color-category) 5%, var(--background-color-category) 95%, rgba(255, 255, 255, 1) 95%);
+    background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, var(--background-color-category) 5%, var(--background-color-category) 95%, rgba(255, 255, 255, 1) 95%);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 1) 5%, var(--background-color-category) 5%, var(--background-color-category) 95%, rgba(255, 255, 255, 1) 95%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+
+    @include rem("padding-top", 22px);
+    @include rem("padding-bottom", 22px);
+
+    figure {
+      display: block;
+      margin: auto;
+
+      @include rem("max-width", 595px);
+    }
+  }
+}

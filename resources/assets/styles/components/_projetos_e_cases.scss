@@ -1,0 +1,232 @@
+.project-cases_title,
+.project-cases_tabs-container_tabs_tab-label,
+.project-cases_tabs-container_tab-contents_tab-item_summary_title {
+  @include make-title(30px, 30px, 0, true);
+}
+
+.project-cases {
+  max-height: 1104.5px;
+  overflow: hidden;
+
+  &_title {
+    @include rem("margin-bottom", 40px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 90px);
+      @include font-computed(40px, 45px);
+    }
+  }
+
+  &_tabs-container {
+    &_tabs {
+      border: none;
+      margin: 0;
+
+      &_tab-label {
+        text-transform: uppercase;
+        font-weight: 400;
+
+        @include rem("margin-right", 12px);
+        @include font-computed(13px, 18px, 0.31px);
+
+        @include media-breakpoint-up(lg) {
+          @include rem("margin-right", 30px);
+          @include font-computed(20px, 30px, 0.48px);
+        }
+
+        &_a {
+          display: block;
+          border: none;
+          margin-right: 0;
+
+          &:hover,
+          &:focus {
+            color: $body-color;
+            border-bottom: 2px solid transparent;
+            text-decoration: none;
+          }
+
+          @include rem("padding-bottom", 12px);
+
+          @include media-breakpoint-up(lg) {
+            @include rem("padding-bottom", 14px);
+          }
+
+          &.active {
+            border-bottom: 2px solid transparent;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    &_tab-contents {
+      border: 0;
+      border-top: 2px solid #f4f4f4;
+
+      @include rem("margin-top", -2px);
+      @include rem("padding", 15px 0);
+
+      &_tab-item {
+        background-color: #f4f4f4;
+
+        &_image {
+          display: block;
+          margin: auto;
+        }
+
+        &_summary {
+          position: relative;
+
+          @include rem("padding", 30px);
+
+          @include media-breakpoint-up(lg) {
+            @include rem("padding", 60px 15px 60px 15px);
+          }
+
+          &_title {
+            display: table-cell;
+            vertical-align: middle;
+
+            @include font-computed(23px, 26px);
+            @include rem("margin-bottom", 20px);
+
+            @include media-breakpoint-up(lg) {
+              @include font-computed(39px, 44px);
+            }
+          }
+
+          &_text {
+            @include font-computed(14px, 24px, 0.28px);
+            @include rem("margin-bottom", 30px);
+
+            @include media-breakpoint-up(md) {
+              min-height: 330px;
+            }
+
+            @include media-breakpoint-up(lg) {
+              @include font-computed(20px, 30px, 0.6px);
+            }
+          }
+
+          &_link {
+            position: relative;
+            font-weight: bold;
+
+            @include font-computed(14px, 30px);
+
+            @include media-breakpoint-up(lg) {
+              position: absolute;
+
+              @include rem("bottom", 30px);
+              @include font-computed(20px);
+            }
+
+            @include arrow-link();
+
+            i {
+              margin-left: 14px;
+              vertical-align: 0;
+              width: 16.8px;
+              height: 9px;
+
+              @include media-breakpoint-up(lg) {
+                vertical-align: 2px;
+              }
+            }
+
+            &:hover,
+            &:focus {
+              color: $body-color;
+            }
+          }
+
+          &_link--image {
+            display: table;
+            min-height: 100px;
+
+            &:hover,
+            &:focus {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .owl-stage {
+    display: flex;
+  }
+
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  .tab-pane {
+    position: relative;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+
+    &.fade {
+      -webkit-transition: opacity 0.21s linear;
+      -o-transition: opacity 0.21s linear;
+      transition: opacity 0.21s linear;
+    }
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      height: initial;
+      display: block;
+
+      .owl-carousel {
+        display: block;
+      }
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    bottom: 50%;
+    margin: 0 -45px;
+    left: 0;
+    right: 0;
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      height: 100px;
+      color: inherit;
+      background: none;
+      border: none;
+      z-index: 100;
+
+      i {
+        font-size: 2.5rem;
+        color: #cecece;
+      }
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        outline: none;
+
+        i {
+          color: darken(#cecece, 20%);
+        }
+      }
+    }
+  }
+}

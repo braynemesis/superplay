@@ -1,0 +1,151 @@
+.hero-slide {
+  height: calc(100vh - 115px);
+
+  @include media-breakpoint-up(md) {
+    height: calc(100vh - 180px);
+    min-height: 550px;
+  }
+
+  .carousel {
+    position: relative;
+    margin-right: 0;
+    height: 100%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 1140px;
+      margin: auto;
+    }
+  }
+
+  .carousel-indicators {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: left;
+    margin: auto;
+
+    @include rem("padding-left", 15px);
+    @include rem("padding-right", 15px);
+
+    li {
+      width: 10.6px;
+      height: 10.6px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+
+      &.active {
+        background-color: #707171;
+      }
+    }
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  &_item {
+    height: 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: 100vw bottom, 100% bottom;
+
+    @include media-breakpoint-up(lg) {
+      background-size: contain, auto;
+      background-position: 100% bottom, 100vw bottom;
+    }
+  }
+
+  &_title {
+    padding-top: 5vh;
+
+    @include make-title(44px, 54px, 0, true);
+
+    @include media-breakpoint-up(md) {
+      padding-top: 8vh;
+
+      @include font-computed(80px, 75px);
+    }
+  }
+
+  &_title--linha1,
+  &_title--linha2 {
+    display: block;
+  }
+
+  &_title--linha2 {
+    margin-left: 10%;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 5%;
+    }
+  }
+
+  &_text {
+    font-weight: 500;
+    color: $title-color;
+    padding-top: 5vh;
+
+    @include font-computed(14px, 20px, 0.56px);
+
+    @include media-breakpoint-up(md) {
+      padding-top: 8vh;
+
+      @include font-computed(22px, 36px, 0.88px);
+    }
+  }
+
+  &_link {
+    display: block;
+    font-weight: bold;
+    color: $link-color;
+    padding-top: 5vh;
+
+    @include font-computed(14px);
+    @include arrow-link();
+
+    i {
+      margin-left: 17.2px;
+      vertical-align: 0;
+      width: 16.8px;
+      height: 9px;
+
+      @include media-breakpoint-up(md) {
+        vertical-align: 2px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 8vh;
+
+      @include font-computed(20px);
+    }
+  }
+
+  &_content_scroll-down {
+    position: absolute;
+    bottom: 0;
+
+    button {
+      display: block;
+      margin: auto;
+
+      img {
+        width: 40px;
+        height: 40px;
+
+        @include media-breakpoint-up(md) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      bottom: 42.9px;
+    }
+  }
+}

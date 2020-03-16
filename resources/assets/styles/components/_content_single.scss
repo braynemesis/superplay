@@ -1,0 +1,62 @@
+.content-single {
+  &::after {
+    content: "";
+    display: block;
+    background: #a2a2a2;
+    width: 100%;
+    margin-bottom: 0;
+
+    @include rem("margin-top", 25px);
+    @include rem("height", 1px);
+
+    @include media-breakpoint-up(sm) {
+      @include rem("margin-top", 50px);
+    }
+  }
+
+  header {
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(sm) {
+      @include rem("margin-bottom", 40px);
+    }
+
+    h1 {
+      font-family: "Gilroy", sans-serif;
+      font-weight: bold;
+      color: #0b070c;
+
+      @include font-computed(20px);
+
+      @include media-breakpoint-up(sm) {
+        @include font-computed(40px, 45px);
+      }
+    }
+  }
+
+  .entry-content {
+    a {
+      position: relative;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 2.5%, var(--background-color-category) 50%, rgba(255, 255, 255, 1) 80%);
+        background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 2.5%, var(--background-color-category) 50%, rgba(255, 255, 255, 1) 80%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 2.5%, var(--background-color-category) 50%, rgba(255, 255, 255, 1) 80%);
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+      }
+    }
+  }
+
+  .sharethis-inline-share-buttons {
+    @include rem("margin-top", 35px);
+    @include rem("margin-bottom", 35px);
+  }
+
+  .st-btn {
+    background-color: #707171 !important;
+  }
+}

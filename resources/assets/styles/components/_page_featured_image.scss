@@ -1,0 +1,84 @@
+.page-featured-image {
+  position: relative;
+
+  @include rem("margin-bottom", 20px);
+  @include rem("min-height", 320px);
+  @include rem("max-height", 580px);
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+
+    @include rem("padding-right", 30px);
+  }
+
+  &_content {
+    position: relative;
+    height: 100%;
+
+    @include media-breakpoint-up(sm) {
+      margin: auto;
+
+      @include rem("max-width", 1680px);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 85%;
+      margin: auto;
+      top: 40px;
+      position: absolute;
+      right: -20px;
+      z-index: -1;
+      background-color: var(--background-color-category);
+
+      @include rem("height", 300px);
+
+      @include media-breakpoint-up(md) {
+        content: none;
+      }
+    }
+
+    &-image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+      @include rem("min-height", 320px);
+      @include rem("max-height", 580px);
+
+      img {
+        display: block;
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        @include rem("min-height", 320px);
+      }
+    }
+  }
+}
+
+.single-post {
+  .page-featured-image {
+    @include rem("padding-left", 15px);
+    @include rem("padding-right", 15px);
+
+    &_content {
+      &::after {
+        content: "";
+        display: block;
+        width: 85%;
+        margin: auto;
+        top: initial;
+        left: initial;
+        right: initial;
+        position: relative;
+
+        @include rem("height", 10px);
+      }
+    }
+  }
+}

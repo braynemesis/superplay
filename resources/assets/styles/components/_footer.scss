@@ -1,0 +1,189 @@
+.return-top {
+  text-align: center;
+
+  @include rem("margin-top", 40px);
+  @include rem("margin-bottom", 80px);
+
+  button {
+    img,
+    span {
+      display: block;
+      margin: auto;
+    }
+
+    img {
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+
+      @include rem ("margin-bottom", 10px);
+    }
+
+    span {
+      font-size: 18px;
+      font-style: italic;
+      color: #a2a2a2;
+
+      @include font-computed(18px, 30px, 0);
+    }
+
+    &:hover {
+      color: #a2a2a2;
+
+      img {
+        -webkit-transform: translateY(-13px);
+        transform: translateY(-13px);
+      }
+    }
+  }
+}
+
+.footer {
+  @include rem("padding", 90px 0);
+
+  background: #f4f4f4;
+  word-break: break-word;
+
+  .menu-social-menu-container,
+  .execphpwidget,
+  .footer_img > div > img {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &_logo {
+    .image {
+      @include rem("max-width", 140px);
+    }
+
+    &--mobile {
+      @include rem("margin-bottom", 50px);
+
+      .image {
+        @include rem("max-width", 88px);
+      }
+    }
+  }
+
+  a {
+    @include make-title(14px, 16px, 0, false, $body-color);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(20px, 23px);
+    }
+  }
+
+  address {
+    @include rem("margin-top", 18px);
+    @include rem("margin-bottom", 18px);
+
+    a {
+      display: block;
+
+      @include font-computed(13px, 19px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(16px, 19px);
+      }
+
+      span {
+        display: block;
+
+        @include rem("margin-bottom", 14px);
+
+        @include media-breakpoint-up(md) {
+          @include font-computed(18px, 0);
+        }
+      }
+    }
+  }
+
+  .mailto,
+  .phoneto {
+    display: block;
+
+    @include font-computed(12px, 11px);
+
+    @include media-breakpoint-up(sm) {
+      @include font-computed(13px, 11px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(18px, 0);
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+    }
+  }
+
+  .execphpwidget {
+    @include rem("margin-bottom", 65px);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .menu-social-menu-container {
+    @include rem("margin-top", 35px);
+
+    li {
+      display: inline-block;
+
+      @include rem("margin-right", 8px);
+
+      @include media-breakpoint-up(md) {
+        @include rem("margin-right", 16px);
+      }
+
+      a {
+        @include font-computed(20px, 20px);
+      }
+    }
+  }
+
+  .menu-footer-menu-container {
+    li {
+      @include rem("margin-bottom", 18px);
+    }
+  }
+
+  .menu-social-menu-container li:last-child {
+    margin-right: 0;
+  }
+
+  .menu-footer-menu-container li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer_logo.footer_logo--mobile {
+    img {
+      @include rem("max-width", 88px, true);
+      @include rem("max-height", 88px, true);
+    }
+  }
+
+  .footer_img.footer_img--mobile {
+    img {
+      @include rem("max-width", 112px, true);
+      @include rem("max-height", 112px, true);
+    }
+  }
+
+  .col {
+    & > div {
+      position: relative;
+      min-height: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525ddc
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+// $new-navbar-dark-color: str-replace(str-replace(#{$navbar-dark-color}, "(", "%28"), ")", "%29");
+// $new-navbar-light-color: str-replace(str-replace(#{$navbar-light-color}, "(", "%28"), ")", "%29");
+$new-navbar-dark-color: rgba(255, 255, 255, 1);
+$new-navbar-light-color: rgba(0, 0, 0, 1);
+
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$new-navbar-dark-color}' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$new-navbar-light-color}' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-dark-toggler-icon-close: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='18px' height='18px' viewBox='0 0 18 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 59.1 (86144) - https://sketch.com --%3E%3Ctitle%3EArtboard%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cline x1='2' y1='2' x2='16.1421356' y2='16.1421356' id='Line' stroke='%23FFFFFF' stroke-width='3'%3E%3C/line%3E%3Cline x1='2' y1='2' x2='16.1421356' y2='16.1421356' id='Line' stroke='%23FFFFFF' stroke-width='3' transform='translate(9.071068, 9.071068) scale(-1, 1) translate(-9.071068, -9.071068) '%3E%3C/line%3E%3C/g%3E%3C/svg%3E");
+$navbar-light-toggler-icon-close: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='18px' height='18px' viewBox='0 0 18 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 59.1 (86144) - https://sketch.com --%3E%3Ctitle%3EArtboard%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cline x1='2' y1='2' x2='16.1421356' y2='16.1421356' id='Line' stroke='%23000000' stroke-width='3'%3E%3C/line%3E%3Cline x1='2' y1='2' x2='16.1421356' y2='16.1421356' id='Line' stroke='%23000000' stroke-width='3' transform='translate(9.071068, 9.071068) scale(-1, 1) translate(-9.071068, -9.071068) '%3E%3C/line%3E%3C/g%3E%3C/svg%3E");
+
+$font-size-base-px:           16px !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+/** Colors */
+$body-color: #707171;
+$title-color: #000;
+$link-color: $body-color;
+
+$font-path: "../fonts";
+
+$owl-image-path: "~owl.carousel/dist/assets/";

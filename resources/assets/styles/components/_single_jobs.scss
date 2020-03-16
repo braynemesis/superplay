@@ -1,0 +1,111 @@
+.single-jobs {
+  &_content {
+    padding-top: 100px;
+
+    h2,
+    p {
+      @include rem("margin-bottom", 35px);
+    }
+
+    h1,
+    h2,
+    a {
+      @include make-title(30px, 37px, 0, true);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(50px, 47.5px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(55px, 65px);
+      }
+    }
+
+    h1 {
+      span {
+        display: block;
+
+        &:last-child {
+          font-weight: 500;
+        }
+      }
+    }
+
+    h2 {
+      color: $body-color;
+
+      @include font-computed(18px, 24px);
+      @include rem("margin-bottom", 20px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 30px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(30px, 35px, 0.9px);
+      }
+    }
+
+    p {
+      @include rem("margin-bottom", 20px);
+      @include font-computed(14px, 24px, 0.28px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(18px, 32px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(20px, 34px, 0.66px);
+      }
+    }
+
+    &_title-container {
+      background-repeat: no-repeat;
+      background-size: 104px 101px;
+      background-position: top right;
+
+      @include rem("margin-bottom", 35px);
+
+      @include media-breakpoint-up(md) {
+        background-image: none !important;
+      }
+
+      h1 {
+        max-width: 70%;
+        word-break: break-word;
+      }
+    }
+
+    &_icon-container {
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top left;
+    }
+
+    &_email-container {
+      h2 {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $body-color;
+
+        @include font-computed(16px, 16px, 0.48px);
+
+        @include media-breakpoint-up(md) {
+          @include font-computed(22px, 30px);
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include font-computed(28px, 16px, 0.9px);
+        }
+      }
+    }
+
+    @include rem("margin-bottom", 35px);
+
+    @include media-breakpoint-up(md) {
+      @include rem("margin-bottom", 150px);
+    }
+  }
+}

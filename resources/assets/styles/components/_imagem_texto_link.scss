@@ -1,0 +1,71 @@
+.image-text-link {
+  background: white;
+
+  &_image-container {
+    max-width: 90%;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+
+    @include rem("margin-bottom", 50px);
+
+    figure {
+      @include rem("max-width", 340px);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: var(--background-color-category);
+      position: absolute;
+      z-index: -1;
+      top: 10%;
+      left: 10%;
+      width: 95%;
+      height: 95%;
+
+      @include media-breakpoint-up(sm) {
+        left: auto;
+        top: auto;
+
+        @include rem("bottom", -15px);
+        @include rem("right", -15px);
+        @include rem("max-width", 300px);
+        @include rem("max-height", 302px);
+      }
+
+      @include media-breakpoint-up(md) {
+        @include rem("max-width", 295px);
+        @include rem("max-height", 295px);
+      }
+    }
+  }
+
+  &_text-link-container {
+    p {
+      @include font-computed(14px, 24px, 0.28px);
+
+      @include media-breakpoint-up(lg) {
+        @include font-computed(22px, 36px, 0.66px);
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+
+      @include rem("margin-top", 12px);
+      @include make-title(14px, 16px, 0.42px, true, $body-color);
+
+      @include media-breakpoint-up(lg) {
+        @include rem("margin-top", 16px);
+        @include font-computed(24px, 16px, 0.72px);
+      }
+
+      &:hover,
+      &:focus {
+        color: $body-color;
+      }
+    }
+  }
+}

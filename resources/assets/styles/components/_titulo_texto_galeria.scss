@@ -1,0 +1,73 @@
+.title-text-gallery {
+  font-family: "Gilroy", sans-serif;
+  background-color: #f8f8f8;
+
+  @include rem("padding-top", 55px);
+  @include rem("padding-bottom", 25px);
+
+  @include media-breakpoint-up(md) {
+    @include rem("padding-top", 80px);
+    @include rem("padding-bottom", 140px);
+  }
+
+  &_title,
+  &_text {
+    font-weight: 500;
+    color: #707171;
+    margin: auto;
+
+    @include font-computed(16px, 16px, 0.48px);
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+
+      @include rem("margin-bottom", 40px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(24px, 40px, 0.72px);
+    }
+  }
+
+  &_title {
+    font-weight: bold;
+    color: #292929;
+
+    @include font-computed(30px, 30px);
+    @include rem("margin-bottom", 25px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(40px, 45px);
+    }
+  }
+
+  &_text {
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 45px);
+    }
+  }
+
+  &_gallery {
+    & > div {
+      @include rem("margin-bottom", 30px);
+
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-image {
+      display: block;
+      margin: auto;
+
+      @include rem("max-width", 135px);
+    }
+  }
+}

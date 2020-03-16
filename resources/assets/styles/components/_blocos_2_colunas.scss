@@ -1,0 +1,45 @@
+.blocks-2-columns {
+  &_column-content {
+    img {
+      display: block;
+      margin: auto;
+
+      @include rem("max-width", 110px);
+      @include rem("margin-bottom", 14px);
+
+      @include media-breakpoint-up(md) {
+        @include rem("margin-bottom", 85px);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+  }
+
+  &_column {
+    @include rem("margin-bottom", 30px);
+
+    @include media-breakpoint-up(md) {
+      @include rem("margin-bottom", 100px);
+    }
+  }
+
+  &_column-title {
+    @include make-title(15px, 16px, 0.75px, true);
+    @include rem("margin-bottom", 12px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(30px, 36px);
+      @include rem("margin-bottom", 45px);
+    }
+  }
+
+  &_column-text {
+    @include font-computed(14px, 17px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(20px, 30px, 0.6px);
+    }
+  }
+}

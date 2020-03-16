@@ -1,0 +1,63 @@
+.pagination {
+  position: relative;
+
+  @include rem("padding", 50px 0);
+  @include rem("margin-bottom", 50px);
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+
+  &_label-link {
+    &--right {
+      text-align: right;
+    }
+
+    a {
+      font-style: italic;
+      text-decoration: underline;
+      color: #a2a2a2;
+    }
+  }
+
+  &_numbers-link {
+    text-align: center;
+
+    li {
+      display: inline;
+
+      @include rem("margin-right", 15px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      font-size: 21px;
+      color: #a2a2a2;
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      color: #212529;
+    }
+  }
+
+  .container {
+    @include media-breakpoint-up(md) {
+      &::before {
+        content: "";
+        display: block;
+        background: #a2a2a2;
+        width: 100%;
+
+        @include rem("margin-top", 50px);
+        @include rem("margin-bottom", 70px);
+        @include rem("height", 1px);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.title-paragraph {
+  &_title {
+    @include make-title(40px, 30px, 0, true);
+    @include rem("margin-bottom", 60px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 100px);
+    }
+  }
+
+  &_text {
+    @include font-computed(14px, 24px, 0.28px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(18px, 40px, 0.54px);
+    }
+  }
+
+  &_col {
+    @include rem("margin-bottom", 50px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 100px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

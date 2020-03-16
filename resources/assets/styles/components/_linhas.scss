@@ -1,0 +1,89 @@
+.module-rows {
+  &_row-content {
+    @include media-breakpoint-up(md) {
+      background: rgb(255, 255, 255);
+      background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      background: linear-gradient(270deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#f4f4f4", GradientType=1);
+    }
+
+    .container {
+      @include rem("padding-top", 45px);
+      @include rem("padding-bottom", 45px);
+
+      @include media-breakpoint-up(md) {
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+        background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+        background: linear-gradient(270deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#f4f4f4", GradientType=1);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include rem("padding-top", 90px);
+        @include rem("padding-bottom", 90px);
+      }
+    }
+
+    @include rem("margin-bottom", 130px);
+
+    &_image {
+      position: relative;
+      margin: auto;
+
+      @include rem("max-width", 490px);
+      @include rem("margin-bottom", 50px);
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    &_summary {
+      @include rem("margin-bottom", 22px);
+
+      &_title {
+        @include make-title(24px, 39px, 0, true);
+        @include rem("margin-bottom", 35px);
+
+        @include media-breakpoint-up(lg) {
+          @include rem("margin-bottom", 50px);
+          @include font-computed(30px, 45px);
+        }
+      }
+
+      &_text {
+        @include font-computed(16px, 24px, 0.28px);
+
+        @include media-breakpoint-up(lg) {
+          @include font-computed(18px, 36px, 0.54px);
+        }
+      }
+    }
+
+    &--inverted {
+      @include media-breakpoint-up(md) {
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 50%);
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#f4f4f4", GradientType=1);
+      }
+
+      .container {
+        @include media-breakpoint-up(md) {
+          background: rgb(255, 255, 255);
+          background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+          background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+          background: linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(244, 244, 244, 1) 15%);
+          filter: progid:dximagetransform.microsoft.gradient(startColorstr="#ffffff", endColorstr="#f4f4f4", GradientType=1);
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,511 @@
+.module-jobs {
+  background-color: #101010;
+  color: #fff;
+
+  @include rem("padding-top", 38.2px);
+  @include rem("padding-bottom", 43.7px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem("padding-top", 201px);
+    @include rem("padding-bottom", 202.2px);
+  }
+
+  &_title {
+    @include make-title(30px, 36px, 0, true, #fff);
+    @include rem("margin-bottom", 43px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(40px, 45px);
+      @include rem("margin-bottom", 91.5px);
+    }
+  }
+
+  &_carousel {
+    @include rem("margin-bottom", 44px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 101px);
+    }
+
+    &_item {
+      border: solid 1px #707070;
+      background-color: #fdef4d;
+      color: #000;
+      height: 100%;
+
+      @include rem("padding", 20px);
+
+      &_title-icon-container {
+        display: table;
+        width: 100%;
+        min-height: 165px;
+
+        @include rem("margin-bottom", 6.5px);
+
+        @include media-breakpoint-up(lg) {
+          @include rem("margin-bottom", 9px);
+        }
+      }
+
+      &_title-container {
+        display: table-cell;
+        vertical-align: middle;
+        width: 80%;
+        word-break: break-word;
+      }
+
+      &_icon-container {
+        display: table-cell;
+        vertical-align: top;
+        width: 20%;
+      }
+
+      &_title {
+        h3 {
+          @include make-title(28px, 37px, 0, true, #2e2e2e);
+
+          span {
+            font-weight: 500;
+            display: block;
+          }
+
+          @include media-breakpoint-up(xl) {
+            @include font-computed(30px, 38px);
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: #2e2e2e;
+
+          h3 {
+            color: #2e2e2e;
+          }
+        }
+      }
+
+      &_icon {
+        height: auto;
+        margin-left: auto;
+        position: relative;
+
+        @include rem("top", 4px);
+        @include rem("max-width", 40px);
+
+        @include media-breakpoint-up(lg) {
+          @include rem("max-width", 52px);
+        }
+      }
+
+      h4 {
+        @include font-computed(14px, 17px);
+        @include rem("margin-bottom", 14px);
+      }
+
+      &_description {
+        display: block;
+
+        @include rem("margin-bottom", 56px);
+        @include font-computed(14px, 17px);
+
+        @include media-breakpoint-up(lg) {
+          @include font-computed(14px, 17px);
+        }
+      }
+
+      &_link {
+        display: block;
+        color: #000;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0;
+
+        @include rem("padding-bottom", 20px);
+        @include arrow-link(true);
+
+        i {
+          margin-left: 21.9px;
+          vertical-align: 0;
+          width: 14px;
+          height: 9px;
+        }
+
+        @include font-computed(14px, 30px);
+
+        @include media-breakpoint-up(lg) {
+          @include font-computed(17px, 36px);
+        }
+
+        &:hover,
+        &:focus {
+          color: #000;
+        }
+      }
+    }
+
+    .arrow {
+      display: block;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-image: url("../images/arrowLeftYellow.png");
+      cursor: pointer;
+      opacity: 0.6;
+
+      @include rem("width", 23px);
+      @include rem("height", 46.3px);
+    }
+
+    .arrowRightYellow {
+      background-position: right center;
+      background-image: url("../images/arrowRightYellow.png");
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-nav {
+      position: absolute;
+      bottom: 60%;
+      margin: 0 -65px;
+      left: 0;
+      right: 0;
+
+      .owl-prev {
+        left: 0;
+      }
+
+      .owl-next {
+        right: 0;
+      }
+
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        height: 100px;
+        color: inherit;
+        background: none;
+        border: none;
+        z-index: 100;
+
+        i {
+          font-size: 2.5rem;
+          color: #cecece;
+        }
+
+        &:hover,
+        &:focus {
+          background: transparent;
+          color: #cecece;
+          outline: none;
+
+          .arrow {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    @include rem("padding-left", 20px);
+    @include rem("padding-right", 20px);
+    @include rem("margin-bottom", 88px);
+
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include rem("padding-right", 20px);
+      @include rem("margin-bottom", 132px);
+    }
+
+    .module-jobs_form_title {
+      font-weight: 500;
+
+      @include make-title(16px, 20px, 0.48px, false, #fff);
+      @include rem("margin-bottom", 30px);
+
+      @include media-breakpoint-up(lg) {
+        font-weight: bold;
+
+        @include font-computed(30px, 36px);
+        @include rem("margin-bottom", 108px);
+      }
+    }
+
+    .form-group {
+      @include rem("margin-bottom", 34px);
+
+      @include media-breakpoint-up(md) {
+        @include rem("margin-bottom", 32.5px);
+      }
+    }
+
+    input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    textarea {
+      resize: none;
+      position: relative;
+
+      @include rem("padding", 12px);
+      @include rem("max-height", 137px);
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        max-height: 100%;
+
+        @include rem("padding", 22px 20px);
+        @include rem("height", 216px);
+      }
+    }
+
+    .select-wrapper {
+      border: 1px solid #fff;
+      border-top: none;
+
+      @include rem("margin-bottom", 34px);
+
+      @include media-breakpoint-up(md) {
+        @include rem("margin-bottom", 51.5px);
+      }
+
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+    }
+
+    .select-wrapper,
+    input,
+    textarea,
+    select {
+      border-radius: 0;
+      background: transparent;
+      border-color: #fff;
+
+      &:focus {
+        background: transparent;
+        outline: none;
+      }
+    }
+
+    .form-control,
+    .comment-form input[type="text"],
+    .comment-form input[type="email"],
+    .comment-form input[type="url"],
+    .comment-form textarea,
+    .search-form .search-field {
+      font-family: "Gilroy", sans-serif;
+      color: #fff;
+      font-weight: 300;
+
+      @include font-computed(14px, 16px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 26px);
+      }
+    }
+
+    .form-control {
+      &:focus {
+        outline: none;
+        border-color: #fff;
+        box-shadow: none;
+      }
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+      font-family: "Gilroy", sans-serif;
+      color: #fff;
+      font-weight: 300;
+
+      @include font-computed(14px, 16px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 26px);
+      }
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-family: "Gilroy", sans-serif;
+      color: #fff;
+      font-weight: 300;
+
+      @include font-computed(14px, 16px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 26px);
+      }
+    }
+
+    ::placeholder {
+      font-family: "Gilroy", sans-serif;
+      color: #fff;
+      font-weight: 300;
+
+      @include font-computed(14px, 16px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 26px);
+      }
+    }
+
+    .custom-file {
+      width: auto;
+    }
+
+    .custom-file-label {
+      text-decoration: underline;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-block;
+      top: 45%;
+
+      @include make-title(16px, 9px, 0, true, #fff);
+
+      &::after {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(24px, 11px);
+      }
+    }
+
+    .custom-file-input:valid ~ .check-file {
+      &::after {
+        width: 25.7px;
+        height: 17.8px;
+        background-image: url("../images/valid.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-color: transparent;
+        content: "";
+        padding: 0;
+        top: 10px;
+        right: 10px;
+        margin-left: 10px;
+        position: absolute;
+      }
+    }
+
+    input[type="file"] {
+      cursor: pointer;
+      display: inline-block;
+      max-width: 230px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input[type="submit"] {
+      background-color: #fdef4d;
+      padding: 0;
+      width: 100%;
+      font-family: "Gilroy", sans-serif;
+      font-weight: bold;
+      color: #000;
+      height: 100%;
+      line-height: 0 !important;
+      border: none;
+      float: right;
+
+      @include font-computed(14px, 0);
+      @include rem("max-width", 77px);
+      @include rem("height", 35px);
+      @include rem("border-radius", 2px);
+
+      @include media-breakpoint-up(md) {
+        max-width: initial;
+
+        @include font-computed(22px, 0);
+        @include rem("width", 109px);
+        @include rem("height", 49.5px);
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+        outline: none;
+      }
+    }
+
+    &.invalid {
+      .select-wrapper {
+        border-color: red;
+      }
+
+      label {
+        color: red;
+      }
+    }
+
+    .has-error {
+      * {
+        color: red;
+        border-color: red;
+      }
+
+      ::-webkit-input-placeholder { /* Edge */
+        color: red;
+      }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: red;
+      }
+
+      ::placeholder {
+        color: red;
+      }
+
+      .help-block {
+        position: absolute;
+        display: block;
+      }
+    }
+
+    // .select-wrapper {
+    //   border-color: red;
+    // }
+  }
+
+  .owl-dots {
+    span {
+      background-color: #fdef4d !important;
+      opacity: 0.6;
+    }
+
+    .owl-dot,
+    .owl-dot span {
+      &:hover,
+      &.active {
+        outline: none;
+      }
+    }
+
+    .owl-dot:hover,
+    .owl-dot.active {
+      span {
+        opacity: 1;
+        outline: none;
+      }
+    }
+  }
+}

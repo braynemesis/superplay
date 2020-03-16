@@ -1,0 +1,107 @@
+.title-3-columns-v1 {
+  &_title,
+  &_column-title {
+    @include make-title(30px, 30px, 0, true);
+  }
+
+  &_title {
+    @include rem("max-width", 150px);
+    @include rem("margin-bottom", 40px);
+
+    @include media-breakpoint-up(sm) {
+      max-width: initial;
+
+      @include font-computed(40px, 50px);
+      @include rem("margin-bottom", 54px);
+    }
+  }
+
+  &_column {
+    @include rem("margin-bottom", 30px);
+  }
+
+  &_column-content {
+    position: relative;
+    background-color: #f4f4f4;
+
+    @include rem("border-radius", 2px);
+    @include rem("padding", 30px);
+
+    @include media-breakpoint-up(lg) {
+      background-color: initial;
+
+      @include rem("padding", 15px);
+    }
+  }
+
+  figure {
+    display: block;
+    margin: auto;
+
+    @include rem("max-width", 170px);
+    @include rem("margin-bottom", 25px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("margin-bottom", 70px);
+    }
+  }
+
+  &_column-title {
+    @include font-computed(24px, 36px);
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(30px, 36px);
+      @include rem("margin-bottom", 40px);
+    }
+  }
+
+  &_column-text,
+  &_column-link {
+    @include font-computed(14px, 24px, 0.28px);
+  }
+
+  &_column-text {
+    @include rem("margin-bottom", 20px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(16px, 30px, 0.13px);
+      @include rem("margin-bottom", 30px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font-computed(18px, 36px, 0.54px);
+      @include rem("margin-bottom", 55px);
+    }
+  }
+
+  &_column-link {
+    position: relative;
+    font-weight: bold;
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 0;
+
+      @include font-computed(20px, 36px);
+    }
+
+    @include arrow-link();
+
+    i {
+      margin-left: 14px;
+      vertical-align: 0;
+      width: 16.8px;
+      height: 9px;
+
+      @include media-breakpoint-up(lg) {
+        vertical-align: 2px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $body-color;
+    }
+  }
+}

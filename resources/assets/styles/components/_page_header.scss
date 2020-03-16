@@ -1,0 +1,86 @@
+.page-header {
+  @include rem("padding-top", 41.5px);
+  @include rem("margin-bottom", 50px);
+
+  @include media-breakpoint-up(md) {
+    @include rem("padding-top", 50px);
+    @include rem("margin-bottom", 30px);
+  }
+
+  h1,
+  p {
+    @include make-title(50px, 60px, 0, true);
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: 0;
+
+    &.page-header_title--small {
+      @include font-computed(34px, 30px);
+
+      @include media-breakpoint-up(md) {
+        @include font-computed(40px, 45px);
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        background-color: var(--background-color-category);
+
+        @include rem("width", 190px);
+        @include rem("height", 60px);
+        @include rem("left", -40px);
+        @include rem("top", -12px);
+      }
+
+      @include font-computed(65px, 75px);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(100px, 121px);
+    }
+  }
+
+  p {
+    font-weight: 500;
+    color: $body-color;
+
+    @include font-computed(16px, 24px, 0.48px);
+
+    @include media-breakpoint-up(xl) {
+      @include font-computed(24px, 36px, 0.62px);
+    }
+  }
+}
+
+.single-post {
+  .page-header {
+    margin-bottom: 0;
+
+    @include rem("padding-top", 26px);
+
+    h1 {
+      margin-bottom: 0;
+
+      @include font-computed(20px, 0);
+
+      @include media-breakpoint-up(md) {
+        @include rem("margin-bottom", 33px);
+        @include font-computed(40px, 45px);
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+}

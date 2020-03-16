@@ -1,0 +1,17 @@
+.simple-text {
+  @include rem("padding-top", 25px);
+  @include rem("margin-bottom", 15px);
+
+  @include media-breakpoint-up(md) {
+    @include rem("padding-top", 75px);
+    @include rem("margin-bottom", 50px);
+  }
+
+  p {
+    @include font-computed(16px, 24px, 0.48px);
+
+    @include media-breakpoint-up(md) {
+      @include font-computed(24px, 36px, 0.62px);
+    }
+  }
+}
