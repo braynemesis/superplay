@@ -1,4 +1,4 @@
-name: 'Combine dependabot PRs'
+name: 'Combine PRs'
 
 # Controls when the action will run - in this case triggered manually
 on:
@@ -132,7 +132,7 @@ jobs:
             await github.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Combined PR - General dependabot',
+              title: 'Combined PR',
               head: '${{ github.event.inputs.combineBranchName }}',
               base: '${{ steps.fetch-branch-names.outputs.base-branch }}',
               body: body
